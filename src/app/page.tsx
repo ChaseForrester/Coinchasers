@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Coins, Star, CheckCircle, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, Coins, Star, CheckCircle, ShieldCheck, Zap, DollarSign, Copyright, Crown, Link2, Award } from "lucide-react";
 
 export default function Home() {
   return (
@@ -106,17 +106,80 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Brand Manifesto Section */}
+      {/* Brand Model Section */}
       <section className="bg-[var(--color-card)] border-y border-border py-24">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <Coins className="w-16 h-16 text-[var(--color-gold-500)] mx-auto mb-8 opacity-50" />
-          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-8 leading-tight">
-            "Success isn't given. <br/><span className="text-[var(--color-gold-500)]">It's chased.</span>"
-          </h2>
-          <p className="text-xl text-gray-400 leading-relaxed font-light">
-            Coinchasers is more than a brand. It's a mindset. We design premium apparel for entrepreneurs, hustlers, and visionaries who wake up every day with a single goal: to secure the bag. 
-            When you wear our pieces, you're making a statement about your ambitions.
-          </p>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4 text-white">
+              <span className="text-[var(--color-gold-500)]">CoinChasers</span>
+            </h2>
+            <p className="text-xl md:text-2xl font-bold tracking-widest text-[var(--color-gold-500)] mb-4">EST. 2016</p>
+            <p className="text-lg text-gray-400 font-bold tracking-wider uppercase">
+              From Nothing. For Everything.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            <div className="flex gap-6">
+              <div className="flex-shrink-0">
+                <DollarSign className="w-12 h-12 text-[var(--color-gold-500)]" strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-[var(--color-gold-500)] uppercase tracking-wider mb-2">The $ That Built Me</h3>
+                <p className="text-gray-300 leading-relaxed font-light">
+                  The same $ that's been with me through every high and low. It's more than a symbol - it's my story, my past, my future, my everything.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-6">
+              <div className="flex-shrink-0">
+                <Copyright className="w-12 h-12 text-[var(--color-gold-500)]" strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-[var(--color-gold-500)] uppercase tracking-wider mb-2">Interlocked CC</h3>
+                <p className="text-gray-300 leading-relaxed font-light">
+                  Two C's locked in - representing focus, consistency and staying true to the chase. No breaks. No shortcuts.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-6">
+              <div className="flex-shrink-0">
+                <Crown className="w-12 h-12 text-[var(--color-gold-500)]" strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-[var(--color-gold-500)] uppercase tracking-wider mb-2">Built Different</h3>
+                <p className="text-gray-300 leading-relaxed font-light">
+                  This crown stands for overcoming, evolving and becoming the king of your own life. They doubted, we built.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-6">
+              <div className="flex-shrink-0">
+                <Link2 className="w-12 h-12 text-[var(--color-gold-500)]" strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-[var(--color-gold-500)] uppercase tracking-wider mb-2">Unbreakable Drive</h3>
+                <p className="text-gray-300 leading-relaxed font-light">
+                  The chain around the edge represents endurance and resilience. Every link is a lesson. Every scar is progress.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-6 md:col-span-2 md:justify-center md:max-w-2xl md:mx-auto">
+              <div className="flex-shrink-0">
+                <Award className="w-12 h-12 text-[var(--color-gold-500)]" strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-[var(--color-gold-500)] uppercase tracking-wider mb-2">Chase More</h3>
+                <p className="text-gray-300 leading-relaxed font-light">
+                  Not just money. Freedom. Legacy. Purpose. We don't stop at enough. We chase more.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
