@@ -10,10 +10,9 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-black">
       
       {/* 1. Massive Hero Section */}
-      <section className="relative h-[85vh] w-full flex items-center justify-center overflow-hidden bg-zinc-900">
-        {/* We would use a real image here. For now, a sleek gradient/texture placeholder */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
-        <div className="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1550639525-c97d455acf70?q=80&w=3270&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat grayscale" />
+      <section className="relative h-[85vh] w-full flex items-center justify-center overflow-hidden bg-black">
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20 z-10" />
+        <div className="absolute inset-0 opacity-70 bg-[url('/hero.png')] bg-cover bg-top bg-no-repeat" />
         
         <div className="relative z-20 text-center px-4 w-full max-w-5xl mx-auto flex flex-col items-center mt-20">
           <h1 className="font-[family-name:var(--font-anton)] text-7xl md:text-[9rem] leading-[0.85] text-white uppercase tracking-tight mb-6 drop-shadow-2xl mix-blend-overlay">
