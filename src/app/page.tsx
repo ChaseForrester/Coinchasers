@@ -99,7 +99,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Brand Model Section (Stark Typography) */}
+      {/* 5. The Soundtrack (SoundCloud Embed) */}
+      <section className="w-full bg-black py-20 border-t border-[var(--color-border)]">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="font-[family-name:var(--font-anton)] text-5xl md:text-6xl text-white uppercase tracking-wide mb-8">
+            Official Soundtrack
+          </h2>
+          <div className="w-full overflow-hidden shadow-2xl shadow-[var(--color-gold-500)]/10">
+            <iframe 
+              width="100%" 
+              height="350" 
+              scrolling="no" 
+              frameBorder="no" 
+              allow="autoplay" 
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/d-rahmeel/sets/coincha-ing-vol-1&color=%23d4af37&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Brand Model Section (Stark Typography) */}
       <section className="bg-black py-32 border-t border-[var(--color-border)]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-24">
