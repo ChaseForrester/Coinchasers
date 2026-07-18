@@ -31,8 +31,8 @@ export default function Home() {
       <section className="w-full bg-black py-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4">
           {/* Category 1 */}
-          <Link href="/category/hoodies" className="group relative h-[60vh] overflow-hidden bg-zinc-900 block">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1440&auto=format&fit=crop')] bg-cover bg-center grayscale transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-80" />
+          <Link href="/category/hoodies" className="group relative h-[60vh] overflow-hidden bg-black block">
+            <div className="absolute inset-0 bg-[url('/hoodie.png')] bg-cover bg-top transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
             <div className="absolute bottom-8 left-8">
               <h2 className="font-[family-name:var(--font-anton)] text-5xl text-white uppercase tracking-wide">Hoodies</h2>
