@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -59,8 +59,13 @@ export default function Footer() {
           <p className="text-gray-600 text-xs font-bold uppercase tracking-widest mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Coinchasers. Built Different.
           </p>
-          <div className="flex gap-4">
-            {/* Social Icons would go here */}
+          <div className="flex gap-6">
+            <a href="https://www.facebook.com/coinchasers/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[var(--color-gold-500)] transition-colors">
+              <Facebook className="w-6 h-6" />
+            </a>
+            <a href="https://www.instagram.com/coinchasers_clothing?igsh=bG1xZzJ6eDIybThx" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[var(--color-gold-500)] transition-colors">
+              <Instagram className="w-6 h-6" />
+            </a>
           </div>
         </div>
 
