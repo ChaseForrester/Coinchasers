@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Anton } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
@@ -15,9 +15,19 @@ const anton = Anton({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#000000",
+};
+
 export const metadata: Metadata = {
   title: "Coinchasers | Chase the Coin",
   description: "Premium clothing for those who want to make money. Clothes, bags, pants, shirts, jumpers.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Coinchasers",
+  },
 };
 
 export default function RootLayout({
