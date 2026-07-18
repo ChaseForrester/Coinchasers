@@ -22,7 +22,6 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Coinchasers | Chase the Coin",
   description: "Premium clothing for those who want to make money. Clothes, bags, pants, shirts, jumpers.",
-  manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
