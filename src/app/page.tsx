@@ -70,7 +70,7 @@ export default function Home() {
             <Link href={`/product/${product.id}`} key={product.id} className="group flex flex-col">
               <div className="relative aspect-[3/4] bg-[#0a0a0a] overflow-hidden mb-4">
                 {/* Product Image */}
-                <div className="absolute inset-0 bg-[url('/product.png')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: `url('${product.imageUrl}')` }} />
                 <div className="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10 flex justify-center">
                   <span className="bg-white text-black font-bold uppercase text-xs tracking-widest py-3 px-6 w-full text-center hover:bg-[var(--color-gold-500)] hover:text-white transition-colors">
                     Quick Add

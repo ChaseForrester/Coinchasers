@@ -17,7 +17,7 @@ export const products: Product[] = [
     description: "Premium heavy-weight cotton blend. Made for late nights and early mornings.",
     price: 125,
     category: "jumpers",
-    imageUrl: "/placeholder.png",
+    imageUrl: "/hoodie.png",
     isNew: true
   },
   {
@@ -26,7 +26,7 @@ export const products: Product[] = [
     description: "Sleek vegan leather briefcase to carry your contracts and cash.",
     price: 180,
     category: "bags",
-    imageUrl: "/placeholder.png",
+    imageUrl: "/briefcase.png",
   },
   {
     id: "p-3",
@@ -34,7 +34,7 @@ export const products: Product[] = [
     description: "Utility meets luxury. Multiple pockets for your multiple streams of income.",
     price: 145,
     category: "pants",
-    imageUrl: "/placeholder.png"
+    imageUrl: "/cargo.png"
   },
   {
     id: "p-4",
@@ -42,7 +42,7 @@ export const products: Product[] = [
     description: "Look sharp in the boardroom. Breathable luxury silk blend.",
     price: 110,
     category: "shirts",
-    imageUrl: "/placeholder.png",
+    imageUrl: "/silk_shirt.png",
     isNew: true
   },
   {
