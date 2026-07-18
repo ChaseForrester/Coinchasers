@@ -16,7 +16,7 @@ export default function Home() {
         
         <div className="relative z-20 text-center px-4 w-full max-w-5xl mx-auto flex flex-col items-center mt-20">
           <h1 className="font-[family-name:var(--font-anton)] text-7xl md:text-[9rem] leading-[0.85] text-white uppercase tracking-tight mb-6 drop-shadow-2xl mix-blend-overlay">
-            WINTER '24
+            SUMMER '26
           </h1>
           <p className="text-white text-lg md:text-2xl font-bold tracking-widest uppercase mb-10 drop-shadow-md">
             The New Standard.
@@ -43,8 +43,8 @@ export default function Home() {
           </Link>
           
           {/* Category 2 */}
-          <Link href="/category/accessories" className="group relative h-[60vh] overflow-hidden bg-zinc-900 block">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611080928236-4c47864821fb?q=80&w=1440&auto=format&fit=crop')] bg-cover bg-center grayscale transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-80" />
+          <Link href="/category/accessories" className="group relative h-[60vh] overflow-hidden bg-black block">
+            <div className="absolute inset-0 bg-[url('/accessory.png')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
             <div className="absolute bottom-8 left-8">
               <h2 className="font-[family-name:var(--font-anton)] text-5xl text-white uppercase tracking-wide">Accessories</h2>
@@ -69,10 +69,8 @@ export default function Home() {
           {latestDrops.map((product) => (
             <Link href={`/product/${product.id}`} key={product.id} className="group flex flex-col">
               <div className="relative aspect-[3/4] bg-[#0a0a0a] overflow-hidden mb-4">
-                {/* Replace with actual image when available */}
-                <div className="absolute inset-0 flex items-center justify-center text-[var(--color-gold-500)] opacity-20 group-hover:scale-110 transition-transform duration-700">
-                  <span className="font-[family-name:var(--font-anton)] text-6xl">CC</span>
-                </div>
+                {/* Product Image */}
+                <div className="absolute inset-0 bg-[url('/product.png')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10 flex justify-center">
                   <span className="bg-white text-black font-bold uppercase text-xs tracking-widest py-3 px-6 w-full text-center hover:bg-[var(--color-gold-500)] hover:text-white transition-colors">
                     Quick Add
