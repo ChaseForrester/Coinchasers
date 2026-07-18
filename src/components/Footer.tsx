@@ -3,7 +3,7 @@ import { Coins, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#050505] border-t border-border pt-16 pb-8">
+    <footer className="bg-black border-t border-[var(--color-gold-500)] border-opacity-20 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           <div className="col-span-1 md:col-span-1">
@@ -64,13 +64,14 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-[var(--color-gold-500)] border-opacity-20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Coinchasers. All rights reserved.
           </p>
-          <div className="flex gap-4">
-            <Link href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/privacy" className="text-gray-500 hover:text-[var(--color-gold-500)] text-sm transition-colors uppercase tracking-wider">Privacy Policy</Link>
+            <Link href="/terms" className="text-gray-500 hover:text-[var(--color-gold-500)] text-sm transition-colors uppercase tracking-wider">Terms of Service</Link>
+            <Link href="/refund" className="text-gray-500 hover:text-[var(--color-gold-500)] text-sm transition-colors uppercase tracking-wider">Refund Policy</Link>
           </div>
         </div>
       </div>

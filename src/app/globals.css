@@ -5,15 +5,15 @@
   --color-gold-500: #d4af37;
   --color-gold-400: #e5c158;
   --color-gold-600: #aa8c2c;
-  --color-background: #050505;
-  --color-foreground: #fafafa;
-  --color-card: #111111;
-  --color-border: #222222;
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-card: #0a0a0a;
+  --color-border: #332a0d; /* Subtle gold-tinted dark border */
 }
 
 :root {
-  --background: #050505;
-  --foreground: #fafafa;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 body {
