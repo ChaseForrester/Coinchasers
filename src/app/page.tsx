@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { DollarSign, Copyright, Crown, Link2, Award, ArrowRight } from "lucide-react";
 import { products } from "@/data/products";
+import SoundCloudShare from "@/components/SoundCloudShare";
 
 export default function Home() {
   const latestDrops = products.slice(0, 4);
@@ -102,9 +103,12 @@ export default function Home() {
       {/* 5. The Soundtrack (SoundCloud Embed) */}
       <section className="w-full bg-black py-20 border-t border-[var(--color-border)]">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-[family-name:var(--font-anton)] text-5xl md:text-6xl text-white uppercase tracking-wide mb-8">
-            Official Soundtrack
-          </h2>
+          <div className="flex justify-center items-center gap-4 mb-8">
+            <h2 className="font-[family-name:var(--font-anton)] text-5xl md:text-6xl text-white uppercase tracking-wide">
+              Official Soundtrack
+            </h2>
+            <SoundCloudShare />
+          </div>
           <div className="w-full overflow-hidden shadow-2xl shadow-[var(--color-gold-500)]/10">
             <iframe 
               width="100%" 

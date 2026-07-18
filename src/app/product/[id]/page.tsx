@@ -1,6 +1,32 @@
 import { notFound } from "next/navigation";
 import { products } from "@/data/products";
 import Link from "next/link";
+import { Metadata } from "next";
+import ProductActions from "@/components/ProductActions";
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const product = products.find(p => p.id === id);
+
+  if (!product) return { title: 'Product Not Found' };
+
+  return {
+    title: `${product.name} | Coinchasers`,
+    description: product.description,
+    openGraph: {
+      title: `${product.name} | Coinchasers`,
+      description: product.description,
+      images: [
+        {
+          url: `https://www.coinchaser.com.au${product.imageUrl}`,
+          width: 800,
+          height: 1000,
+          alt: product.name,
+        }
+      ],
+    },
+  };
+}
 
 export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -9,6 +35,8 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   if (!product) {
     notFound();
   }
+
+  const productUrl = `https://www.coinchaser.com.au/product/${product.id}`;
 
   return (
     <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -24,15 +52,13 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
         {/* Product Image */}
-        <div className="relative aspect-[4/5] bg-[var(--color-card)] border border-border">
+        <div className="relative aspect-[4/5] bg-[var(--color-card)] border border-border overflow-hidden">
           {product.isNew && (
             <div className="absolute top-4 left-4 bg-[var(--color-gold-500)] text-black text-xs font-bold uppercase tracking-wider px-3 py-1 z-10">
               New Arrival
             </div>
           )}
-          <div className="absolute inset-0 bg-neutral-900 flex items-center justify-center">
-            <span className="text-neutral-700 font-bold uppercase tracking-widest text-lg">Image Coming Soon</span>
-          </div>
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${product.imageUrl}')` }} />
         </div>
 
         {/* Product Details */}
@@ -63,11 +89,9 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             </div>
           </div>
 
-          <button className="bg-[var(--color-gold-500)] hover:bg-[var(--color-gold-400)] text-black py-4 font-bold uppercase tracking-widest text-sm transition-all hover-lift w-full mb-4">
-            Add to Bag
-          </button>
+          <ProductActions productId={product.id} productUrl={productUrl} productName={product.name} />
           
-          <div className="mt-8 pt-8 border-t border-border space-y-4 text-sm text-gray-500">
+          <div className="pt-8 border-t border-border space-y-4 text-sm text-gray-500">
             <p className="flex justify-between">
               <span className="uppercase tracking-wider font-medium text-gray-400">Shipping</span>
               <span>Free on orders over $200</span>

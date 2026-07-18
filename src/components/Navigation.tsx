@@ -1,11 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { ShoppingCart, Menu, X, Coins, Search, User } from "lucide-react";
-import { useState } from "react";
+import { ShoppingCart, Menu, X, Coins, Search, User, Heart } from "lucide-react";
+import { useState, useEffect } from "react";
+import { useFavorites } from "@/store/useFavorites";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { favorites } = useFavorites();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <nav className="glass-nav sticky top-0 w-full z-50">
@@ -44,6 +51,14 @@ export default function Navigation() {
             <button className="text-white hover:text-[var(--color-gold-500)] transition-colors hidden sm:block">
               <User className="w-5 h-5" />
             </button>
+            <Link href="/favorites" className="text-white hover:text-[var(--color-gold-500)] transition-colors relative">
+              <Heart className="w-5 h-5" />
+              {mounted && favorites.length > 0 && (
+                <span className="absolute -top-2 -right-2 bg-[var(--color-gold-500)] text-black text-[10px] font-black rounded-full w-4 h-4 flex items-center justify-center">
+                  {favorites.length}
+                </span>
+              )}
+            </Link>
             <button className="text-white hover:text-[var(--color-gold-500)] transition-colors relative">
               <ShoppingCart className="w-5 h-5" />
               <span className="absolute -top-2 -right-2 bg-[var(--color-gold-500)] text-black text-[10px] font-black rounded-full w-4 h-4 flex items-center justify-center">0</span>
