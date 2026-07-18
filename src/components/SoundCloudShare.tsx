@@ -4,10 +4,11 @@ export default function SoundCloudShare() {
   return (
     <button 
       onClick={() => {
-        if (typeof navigator !== 'undefined' && 'share' in navigator) {
-          navigator.share({ title: 'Coinchasers Soundtrack', url: 'https://soundcloud.com/d-rahmeel/sets/coincha-ing-vol-1' })
-        } else {
-          navigator.clipboard.writeText('https://soundcloud.com/d-rahmeel/sets/coincha-ing-vol-1');
+        const nav: any = typeof navigator !== 'undefined' ? navigator : null;
+        if (nav && nav.share) {
+          nav.share({ title: 'Coinchasers Soundtrack', url: 'https://soundcloud.com/d-rahmeel/sets/coincha-ing-vol-1' })
+        } else if (nav && nav.clipboard) {
+          nav.clipboard.writeText('https://soundcloud.com/d-rahmeel/sets/coincha-ing-vol-1');
           alert('Soundtrack link copied!');
         }
       }}

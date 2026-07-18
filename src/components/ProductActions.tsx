@@ -14,18 +14,19 @@ export default function ProductActions({ productId, productUrl, productName }: {
   }, []);
 
   const handleShare = async () => {
-    if (navigator.share) {
+    const nav: any = typeof navigator !== 'undefined' ? navigator : null;
+    if (nav && nav.share) {
       try {
-        await navigator.share({
+        await nav.share({
           title: `Coinchasers - ${productName}`,
           url: productUrl,
         });
       } catch (err) {
         console.error("Error sharing", err);
       }
-    } else {
+    } else if (nav && nav.clipboard) {
       // Fallback to copy link
-      navigator.clipboard.writeText(productUrl);
+      nav.clipboard.writeText(productUrl);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
